@@ -9,14 +9,14 @@ https://stitch.api.soundcast.fm/v1/ausha?podcastUrl=${URL_CONTENT}&soundcastId=$
 ### Parameters
 
 Required:
-${URL_CONTENT} : URL of the content to be stiched
-${SOUNDCAST_ID} : TAG ID 
-${PAGE_URL} :  URL from where the content is played
+- ${URL_CONTENT} : URL of the content to be stiched
+- ${SOUNDCAST_ID} : TAG ID 
+- ${PAGE_URL} :  URL from where the content is played
 
 Optional:
-${PAGE_TITLE}
-${TAGS}
-${KEYWORDS}
+- ${PAGE_TITLE}
+- ${TAGS}
+- ${KEYWORDS}
 
 ## Testing
 
