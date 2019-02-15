@@ -20,7 +20,7 @@ Optional:
 
 ## Testing
 
-Add &test=true to your request
+Add **&test=true** to your request
 
 
 ## Any questions
