@@ -4,7 +4,7 @@ is an API call to stich Audio content with and AD
 ## Request Ad + Stiching content
 Just call the following URL 
 ```
-https://stitch.api.soundcast.fm/v1/ausha?podcastUrl=${URL_CONTENT}&soundcastId=${SOUNDCAST_ID}&pageTitle=${PAGE_TITLE}&pageDescription=${PAGE_DESCRIPTION}&keywords=${KEYWORDS}&pageUrl=${PAGE_URL}&tags=${TAGS}
+https://stitch.api.soundcast.fm/v1/podcast?podcastUrl=${URL_CONTENT}&soundcastId=${SOUNDCAST_ID}&pageTitle=${PAGE_TITLE}&pageDescription=${PAGE_DESCRIPTION}&keywords=${KEYWORDS}&pageUrl=${PAGE_URL}&tags=${TAGS}
 ```
 ### Parameters
 
