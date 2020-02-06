@@ -13,7 +13,7 @@ https://stitch.api.soundcast.fm/v1/podcast
 ### Query parameters
 
 | Parameters      | Required | Description                                                                 |
-|:---------------:|:--------:|:---------------------------------------------------------------------------:|
+|:--------------- |:-------- |:--------------------------------------------------------------------------- |
 | sountcastId     | true     | SoundCast tag ID                                                            |
 | podcastUrl      | true     | Url to the podcast audio file                                               |
 | pageUrl         | false    | Url of the podcast a page                                                   |
@@ -29,7 +29,7 @@ https://stitch.api.soundcast.fm/v1/podcast
 When not pass throught the query params, the following parameters will be set by the request Headers
 
 | Parameters      | Description                                                                 |
-|:---------------:|:---------------------------------------------------------------------------:|
+|:--------------- |:--------------------------------------------------------------------------- |
 | ip              | IP of the listener, will be use for targeting and analytics prupose         |
 | userAgent       | User Agent of the listener, will be use for targeting and analytics prupose |
 
