@@ -14,14 +14,14 @@ https://stitch.api.soundcast.fm/v1/podcast
 
 | Parameters      | Required | Description                                                                 |
 |:--------------- |:-------- |:--------------------------------------------------------------------------- |
-| sountcastId     | true     | SoundCast tag ID                                                            |
+| soundcastId     | true     | SoundCast tag ID                                                            |
 | podcastUrl      | true     | Url to the podcast audio file                                               |
-| pageUrl         | false    | Url of the podcast a page                                                   |
+| pageUrl         | false    | Url of the podcast's a page                                                 |
 | pageDescription | false    | Description of the podcast                                                  |
 | pageTitle       | false    | Title of the podcast                                                        |
 | keywords        | false    | Words to classify the podcast separated by a , (ex: tech, lifestyle, etc..) |
-| ip              | false    | IP of the listener, will be use for targeting and analytics prupose         |
-| userAgent       | false    | User Agent of the listener, will be use for targeting and analytics prupose |
+| ip              | false    | IP of the listener, will be use for targeting and analytics purpose         |
+| userAgent       | false    | User Agent of the listener, will be use for targeting and analytics purpose |
 | consent         | false    | GDPR consent string of the listener                                         |
 | idfa            | false    | IDFA of the listener device                                                 |
 | test            | false    | indicates a test call                                                       |
@@ -30,8 +30,8 @@ When not pass throught the query params, the following parameters will be set by
 
 | Parameters      | Description                                                                 |
 |:--------------- |:--------------------------------------------------------------------------- |
-| ip              | IP of the listener, will be use for targeting and analytics prupose         |
-| userAgent       | User Agent of the listener, will be use for targeting and analytics prupose |
+| ip              | IP of the listener, will be use for targeting and analytics purpose         |
+| userAgent       | User Agent of the listener, will be use for targeting and analytics purpose |
 
 
 ## Testing
