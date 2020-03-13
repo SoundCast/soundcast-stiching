@@ -1,0 +1,171 @@
+swagger: "2.0"
+info:
+  version: 1.0.0
+  title: Stitch API
+host: stitch.api.soundcast.fm
+basePath: /v1
+paths:
+  /podcast:
+    get:
+      operationId: podcast
+      summary: get podcast stitched, if it is not available, stitch it with an ad
+      parameters:
+        - name: soundcastId
+          in: query
+          description: Tag where the delivery is needed
+          required: true
+          type: string
+        - name: podcastUrl
+          in: query
+          description: podcast that need to be stitched
+          required: true
+          type: string
+        - name: pageTitle
+          in: query
+          description: title of the page where the stitched podcast is
+          required: false
+          type: string
+        - name: pageDescription
+          in: query
+          description: description of the page where the stitched podcast is
+          required: false
+          type: string
+        - name: pageUrl
+          in: query
+          description: URL of the page where the stitched podcast is
+          required: false
+          type: string
+        - name: keywords
+          in: query
+          description: all keywords that are linked to the podcast content ( useful for some targeting )
+          required: false
+          type: array
+          items:
+            type: string
+        - name: consent
+          in: query
+          description: consent string that is send to check authorizations
+          required: false
+          type: string
+        - name: idfa
+          in: query
+          description: identifier for Apple
+          required: false
+          type: string
+        - name: cookieId
+          in: header
+          description: cookie to identify the user
+          required: false
+          type: string
+        - name: ip
+          in: header
+          description: ip from the user request
+          required: false
+          type: string
+        - name: userAgent
+          in: query
+          description: information about which service call our API
+          required: false
+          type: string
+      responses:
+        422:
+          description: Unprocessable entity, wrong parameters or unable to get payload from request
+          schema:
+            $ref: "#/definitions/Error"
+        302:
+          description: Status found, is sent if the stitched file is found or if an error occurred during process and the original podcast file is sent back
+          schema:
+            $ref: "#/definitions/RequestBody"
+        default:
+          description: unexpected error
+          schema:
+            $ref: "#/definitions/Error"
+  /redirect.mp3:
+    get:
+      summary: get podcast stitched, if it is not available, stitch it with an ad
+      operationId: redirect
+      parameters:
+        - name: soundcastId
+          in: query
+          description: Tag where the delivery is needed
+          required: true
+          type: string
+        - name: podcastUrl
+          in: query
+          description: podcast that need to be stitched
+          required: true
+          type: string
+        - name: pageTitle
+          in: query
+          description: title of the page where the stitched podcast is
+          required: false
+          type: string
+        - name: pageDescription
+          in: query
+          description: description of the page where the stitched podcast is
+          required: false
+          type: string
+        - name: pageUrl
+          in: query
+          description: URL of the page where the stitched podcast is
+          required: false
+          type: string
+        - name: keywords
+          in: query
+          description: all keywords that are linked to the podcast content ( useful for some targeting )
+          required: false
+          type: array
+          items:
+            type: string
+        - name: consent
+          in: query
+          description: consent string that is send to check authorizations
+          required: false
+          type: string
+        - name: idfa
+          in: query
+          description: identifier for Apple
+          required: false
+          type: string
+        - name: cookieId
+          in: header
+          description: cookie to identify the user
+          required: false
+          type: string
+        - name: ip
+          in: header
+          description: ip from the user request
+          required: false
+          type: string
+        - name: userAgent
+          in: query
+          description: information about which service call our API
+          required: false
+          type: string
+      responses:
+        422:
+          description: Unprocessable entity, wrong parameters or unable to get payload from request
+          schema:
+            $ref: "#/definitions/Error"
+        302:
+          description: Status found, is sent if the stitched file is found or if an error occurred during process and the original podcast file is sent back
+          schema:
+            $ref: "#/definitions/RequestBody"
+        default:
+          description: unexpected error
+          schema:
+            $ref: "#/definitions/Error"
+definitions:
+  Error:
+    type: object
+    required:
+      - validationError
+    properties:
+      validationError:
+        type: string
+  RequestBody:
+    type: object
+    properties:
+      file:
+        type: string
+        format: binary
